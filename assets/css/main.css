@@ -32,6 +32,10 @@ button {
     font-family: 'CenturyGothic', sans-serif;
 }
 
+input {
+    border-radius: 0;
+}
+
 .burger-button {
     z-index: 9999;
     position: fixed;
@@ -98,6 +102,15 @@ button {
     color: #653D3E;
 }
 
+.instagram {
+    width: 40px;
+    display: block;
+}
+
+.instagram img {
+    width: 100%;
+}
+
 .request-button {
     padding: 10px 30px;
     font-size: 16px;
@@ -120,6 +133,15 @@ button {
 .container {
     width: 1366px;
     margin: 0 auto;
+}
+
+.description {
+    font-size: 18px;
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 30px;
+    margin-bottom: 100px;
 }
 
 .menu {
@@ -162,16 +184,6 @@ header .header .request-button {
     margin-top: 50px;
     width: 320px;
 }
-
-/* .how {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-gap: 25px;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 32%));
-    grid-template-rows: 50% 50%;
-} */
 
 .how {
     width: 100%;
@@ -233,7 +245,7 @@ header .header .request-button {
 }
 
 .action .container {
-    width: 320px;
+    max-width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -257,16 +269,44 @@ header .header .request-button {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     line-height: 50px;
 }
 
-.delivery__item {
-    display: flex;
-    width: 100%;
+.delivery__list {
+    display: inline-flex;
+    flex-direction: column;
+    width: 350px;
     justify-content: space-between;
 }
 
+.delivery__list select {
+    width: 100%;
+    border-radius: 0;
+    background: #fff;
+    position: relative;
+    height: 34px;
+    border: 1px solid #000;
+    font-size: 16px;
+    line-height: 1;
+    outline: 0;
+    margin-bottom: 25px;
+}
+
+.delivery__list .request-button {
+    width: 100% !important;
+}
+
+.delivery__sub-description {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 26px;
+    text-align: center;
+    width: 350px;
+}
+
 .map {
+    height: 500px;
     width: 100%;
 }
 
@@ -357,12 +397,22 @@ footer {
 }
 
 .form .request-button {
+    width: 100%;
     margin-top: 50px;
 }
 
 .form__recall {
     text-align: center;
     margin-top: 25px;
+}
+
+.form__privacy {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.form__privacy a {
+    color: #DF7C7D;
 }
 
 .splide__slide {
@@ -375,6 +425,68 @@ footer {
     object-fit: cover;
 }
 
+@keyframes move-up-down {
+    0% {
+        bottom: 5vh;
+    }
+
+    30% {
+        bottom: 5.5vh;
+    }
+
+    100% {
+        bottom: 5vh;
+    }
+}
+
+.button-up {
+    transition: 1s;
+    position: fixed;
+    bottom: 5vh;
+    right: -15vw;
+    color: #DF7C7D;
+    padding: 5px 15px;
+    font-size: 16px;
+    border: 1px solid #DF7C7D;
+    background: #fff;
+    animation: move-up-down 1.5s ease-in infinite;
+}
+
+.gallery .popup-content {
+    position: relative;
+    background: transparent;
+    box-shadow: none;
+}
+
+.gallery .popup-content img {
+    object-fit: contain;
+}
+
+.gallery .prev-element {
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%) rotate(-90deg);
+    color: #DF7C7D;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.gallery .next-element {
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%) rotate(90deg);
+    color: #DF7C7D;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.prev-element:hover, .next-element:hover {
+    color: #fff;
+}
 @media screen and (max-width: 1024px) {
     .container {
         width: 80%;
@@ -405,11 +517,43 @@ footer {
     }
 }
 
+@media screen and (max-width: 800px) {
+    .description {
+        width: 100%;
+        padding: 0 25px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .button-up {
+        transition: .5s;
+        position: fixed;
+        bottom: 5vh;
+        right: -100px;
+        color: #DF7C7D;
+        padding: 5px 15px;
+        font-size: 16px;
+        border: 1px solid #DF7C7D;
+        background: #fff;
+        animation: move-up-down 1.5s ease-in infinite;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .delivery__list, .delivery__sub-description  {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
 @media screen and (max-width: 600px) {
 
     .container {
         width: 100%;
         padding: 0 10px;
+    }
+
+    .how__item {
+        flex: 1 1 100%;
     }
 
     .request-button {
@@ -424,12 +568,14 @@ footer {
         display: flex;
     }
 
-    .menu {
-        flex-direction: column;
-    }
-
     .footer__contacts, .delivery {
         font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .menu {
+        flex-direction: column;
     }
 }
 

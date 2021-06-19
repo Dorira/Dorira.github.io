@@ -28,7 +28,9 @@
             </button>
         </div>
         <div class="nav__item">
-            <a href="https://www.instagram.com/buketovo_rostov/?hl=ru">inst</a>
+            <a class="instagram" href="https://www.instagram.com/buketovo_rostov/?hl=ru">
+                <img src="/assets/img/icons/inst-anim.gif" alt="Инстаграм">
+            </a>
         </div>
     </nav>
     <header>
@@ -43,6 +45,8 @@
     <section class="menu">
         <a href="#flowers" class="menu__item">Букеты</a>
         <a href="#balloons" class="menu__item">Воздушные шары</a>
+        <a href="#about" class="menu__item">О компании</a>
+        <a href="#delivery" class="menu__item">Доставка</a>
         <a href="#contacts" class="menu__item">Контакты</a>
     </section>
     <section class="how-container">
@@ -80,17 +84,18 @@
         <div class="container">
             <h2 class="section-title">Наши цветы</h2>
             <div class="list">
-                <img src="/assets/img/flowers/1.png" alt="цветы">
-                <img src="/assets/img/flowers/1.png" alt="цветы">
-                <img src="/assets/img/flowers/1.png" alt="цветы">
-                <img src="/assets/img/flowers/1.png" alt="цветы">
-                <img src="/assets/img/flowers/1.png" alt="цветы">
-                <img src="/assets/img/flowers/1.png" alt="цветы">
-                <img src="/assets/img/flowers/1.png" alt="цветы">
-                <img src="/assets/img/flowers/1.png" alt="цветы">
-                <img src="/assets/img/flowers/1.png" alt="цветы">
-                <img src="/assets/img/flowers/1.png" alt="цветы">
-                <img src="/assets/img/flowers/1.png" alt="цветы">
+                <img class="flowers-image" src="/assets/img/flowers/1.png" alt="цветы">
+                <img class="flowers-image" src="/assets/img/flowers/2.png" alt="цветы">
+                <img class="flowers-image" src="/assets/img/flowers/3.png" alt="цветы">
+                <img class="flowers-image" src="/assets/img/flowers/4.png" alt="цветы">
+                <img class="flowers-image" src="/assets/img/flowers/5.png" alt="цветы">
+                <img class="flowers-image" src="/assets/img/flowers/6.png" alt="цветы">
+                <img class="flowers-image" src="/assets/img/flowers/7.png" alt="цветы">
+                <img class="flowers-image" src="/assets/img/flowers/8.png" alt="цветы">
+                <img class="flowers-image" src="/assets/img/flowers/9.png" alt="цветы">
+                <img class="flowers-image" src="/assets/img/flowers/10.png" alt="цветы">
+                <img class="flowers-image" src="/assets/img/flowers/11.png" alt="цветы">
+                <img class="flowers-image" src="/assets/img/flowers/12.png" alt="цветы">
             </div>
         </div>
     </section>
@@ -104,17 +109,13 @@
         <div class="container">
             <h2 class="section-title">Наши воздушные шары</h2>
             <div class="list">
-                <img src="/assets/img/balloons/IMG_0023 1.png" alt="воздушные шары">
-                <img src="/assets/img/balloons/IMG_0023 1.png" alt="воздушные шары">
-                <img src="/assets/img/balloons/IMG_0023 1.png" alt="воздушные шары">
-                <img src="/assets/img/balloons/IMG_0023 1.png" alt="воздушные шары">
-                <img src="/assets/img/balloons/IMG_0023 1.png" alt="воздушные шары">
-                <img src="/assets/img/balloons/IMG_0023 1.png" alt="воздушные шары">
-                <img src="/assets/img/balloons/IMG_0023 1.png" alt="воздушные шары">
-                <img src="/assets/img/balloons/IMG_0023 1.png" alt="воздушные шары">
-                <img src="/assets/img/balloons/IMG_0023 1.png" alt="воздушные шары">
-                <img src="/assets/img/balloons/IMG_0023 1.png" alt="воздушные шары">
-                <img src="/assets/img/balloons/IMG_0023 1.png" alt="воздушные шары">
+                <img class="balloons-image" src="/assets/img/balloons/1.png" alt="воздушные шары">
+                <img class="balloons-image" src="/assets/img/balloons/2.png" alt="воздушные шары">
+                <img class="balloons-image" src="/assets/img/balloons/3.png" alt="воздушные шары">
+                <img class="balloons-image" src="/assets/img/balloons/4.png" alt="воздушные шары">
+                <img class="balloons-image" src="/assets/img/balloons/5.png" alt="воздушные шары">
+                <img class="balloons-image" src="/assets/img/balloons/6.png" alt="воздушные шары">
+                <img class="balloons-image" src="/assets/img/balloons/7.png" alt="воздушные шары">
             </div>
         </div>
     </section>
@@ -124,8 +125,14 @@
             <button class="request-button request-button--inline">Или подобрать индивидуально</button>
         </div>
     </section>
-    <section class="slider">
+    <section class="slider" id="about">
         <h2 class="section-title">О нас</h2>
+        <p class="description">
+            Уютная флористическая кофейня в центре города в формате "у дома".
+            У нас вы можете насладиться чашечкой кофе с круассаом на летней террасе, собрать самый красивый букет,
+            выбрать оригинальный фонтан из воздушных шаров,
+            дополнить основной подарок приятными мелочами.
+        </p>
         <div class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
@@ -142,22 +149,36 @@
             </div>
         </div>
     </section>
-    <section class="delivery-container">
+    <section class="delivery-container" id="delivery">
         <div class="container">
             <h2 class="section-title">Доставка</h2>
+            <p class="description">
+                Доставка осуществляется бережно, букет и воздушные шары транспортируются в специальной упаковке.
+                Также, у нас есть опция срочной доставки. Доставим в течении 30 минут.
+            </p>
             <div class="delivery">
-                <div class="delivery__item">
-                    <span>По Ростову</span>
-                    <span>300р</span>
-                </div>
-                <div class="delivery__item">
-                    <span>За пределами города</span>
-                    <span>Рассчитывается индивидуально</span>
-                </div>
+                <label class="delivery__list">
+                    <h3 class="section-title">Узнать цену доставки</h3>
+                    <select name="delivery">
+                        <option value="Новое поселение">Новое поселение - 200руб.</option>
+                        <option value="Рабочий городок">Рабочий городок - 300руб.</option>
+                        <option value="Нахаловка">Нахаловка - 300руб.</option>
+                        <option value="Зорге">Зорге - 400руб.</option>
+                        <option value="Железнодорожный">Железнодорожный - 350руб.</option>
+                        <option value="Кировский">Кировский - 300руб.</option>
+                        <option value="Ворошиловский">Ворошиловский - 399руб.</option>
+                        <option value="Пролетарский">Пролетарский - 375руб.</option>
+                        <option value="Первомайский">Первомайский - 510руб.</option>
+                        <option value="Аксай">Аксай - 600руб.</option>
+                        <option value="Советский">Советский - 500руб.</option>
+                    </select>
+                    <button class="request-button">Заказать</button>
+                </label>
+                <span class="delivery__sub-description">Доставка за пределами города рассчитывается индивидуально</span>
             </div>
         </div>
     </section>
-    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.979190680656!2d39.68857621582452!3d47.23655292145995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9a881362ab7%3A0x93d0fd95af6d3bcb!2z0JHRg9C60LXRgtC-0LLQvg!5e0!3m2!1sru!2sru!4v1623523672973!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="map" id="map"></div>
     <footer id="contacts">
         <div class="container">
             <div class="footer">
@@ -170,23 +191,41 @@
                         г.Ротов-на-Дону <br />
                         пер. Доломановский 126
                     </span>
-                    <a href="https://www.instagram.com/buketovo_rostov/?hl=ru">inst</a>
+                    <a class="instagram" href="https://www.instagram.com/buketovo_rostov/?hl=ru">
+                        <img src="/assets/img/icons/inst.svg" alt="Инстаграм">
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
-    
+    <button class="button-up">Наверх</button>
     <!-- мобильное меню -->
     <div class="popup-container mobile-menu">
         <nav class="mobile-nav">
             <div class="nav__item">
-                <a href="https://www.instagram.com/buketovo_rostov/?hl=ru">inst</a>
+                <a class="instagram" href="https://www.instagram.com/buketovo_rostov/?hl=ru">
+                    <img src="/assets/img/icons/inst-anim.gif" alt="Инстаграм">
+                </a>
             </div>
             <a class="tel" href="tel:+79181114144">+7(918) 111 41 44</a>
             <button class="request-button">
                 Заказать звонок
             </button>
         </nav>
+    </div>
+    <!-- галерея -->
+    <div class="popup-container gallery">
+        <label class="burger-button" for="form">
+            <input type="checkbox" id="form" class="request-form--close" disabled checked onclick="toggleGallery(this, true)"/> 
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="popup-content">
+
+            <div class="arrow prev-element">&#8963</div>
+            <div class="arrow next-element">&#8963</div>         
+        </div>
     </div>
     <!-- форма заявки -->
     <div class="popup-container request-form">
@@ -208,11 +247,16 @@
                 </label>
                 <button class="request-button">Отправить</button>
                 <span class="form__recall">Перезвоним вам через 30 секунд</span>
+                <span class="form__privacy">Нажимая на кнопку отправить, я даю согласие на обработку <a href="assets/privacy.rtf" target="_blank">персональных данных.</a></span>
             </form>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="index.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2s99M0RG6M9RH2hnp-6u2_UURyDm4zR4&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
 </body>
 </html>

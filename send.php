@@ -3,7 +3,7 @@ require_once 'sms.ru.php';
 $smsru = new SMSRU('B9780512-1BAF-FA43-B132-18AC4B86E9B0')
 
 $data = new stdClass();
-$data->to = '79181981869';
+$data->to = '79528224017';
 $data->text = 'Новая заявка';
 $data->test = 1;
 $sms = $smsru->send_one($data);
