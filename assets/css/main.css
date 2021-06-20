@@ -46,45 +46,8 @@ input {
     flex-direction: column;
 }
 
-.burger-button span {
-    background: #636363;
-    border-radius:10px;
-    height: 4px;
-    margin: 4px 0;
-    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
-}
-
-.burger-button input[type="checkbox"] {
-    display:none;
-}
-
-.burger-button span:nth-of-type(1) {
-    width:50%;
-}
-
-.burger-button span:nth-of-type(2) {
-    width:100%;
-}
-  
-.burger-button span:nth-of-type(3) {
-    width:75%;
-    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
-}
-
-.burger-button input[type="checkbox"]:checked ~ span:nth-of-type(1){
+.burger-button img {
     width: 100%;
-    transform-origin: bottom;
-    transform: rotatez(45deg) translate(8px, 7px)
-}
-  
-.burger-button input[type="checkbox"]:checked ~ span:nth-of-type(2){
-    transform-origin: top;
-    transform: rotatez(-45deg)
-}
-  
-.burger-button input[type="checkbox"]:checked ~ span:nth-of-type(3){
-    opacity: 0;
-    transform: rotatez(-45deg)
 }
 
 .nav {
@@ -547,6 +510,10 @@ footer {
 }
 @media screen and (max-width: 600px) {
 
+    .header img {
+        margin-top: 50px
+    }
+    
     .container {
         width: 100%;
         padding: 0 10px;
@@ -601,7 +568,6 @@ footer {
 }
 
 @media screen and (min-width: 600px) {
-
     .popup-container {
         background: rgba(255, 255, 255, 0.5);
         justify-content: center;

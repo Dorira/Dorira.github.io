@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-    <label class="burger-button navbar-button" for="check">
-        <input type="checkbox" id="check" onclick="toggleNavbar(this)"/> 
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
+    <div
+    class="burger-button navbar-button" 
+    onclick="toggleNavbar()">
+        <img class="burger-button--open" src="/assets/img/icons/phone.svg">
+        <img class="burger-button--close" style="display: none" src="/assets/img/icons/close.svg">
+    </div>
     <nav class="nav">
         <div class="nav__item">
             <a href="tel:+79181114144">+7(918) 111 41 44</a>
@@ -215,26 +215,23 @@
     </div>
     <!-- галерея -->
     <div class="popup-container gallery">
-        <label class="burger-button" for="form">
-            <input type="checkbox" id="form" class="request-form--close" disabled checked onclick="toggleGallery(this, true)"/> 
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+        <div
+        class="burger-button" 
+        onclick="toggleGallery('close')">
+            <img class="burger-button--close" style="display: none" src="/assets/img/icons/close.svg">
+        </div>
         <div class="popup-content">
-
             <div class="arrow prev-element">&#8963</div>
             <div class="arrow next-element">&#8963</div>         
         </div>
     </div>
     <!-- форма заявки -->
     <div class="popup-container request-form">
-        <label class="burger-button" for="form">
-            <input type="checkbox" id="form" class="request-form--close" disabled checked onclick="toggleForm(this, true)"/> 
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+        <div
+        class="burger-button" 
+        onclick="toggleForm('close')">
+            <img class="burger-button--close" style="display: none" src="/assets/img/icons/close.svg">
+        </div>
         <div class="popup-content">
             <form class="form">
                 <label>
