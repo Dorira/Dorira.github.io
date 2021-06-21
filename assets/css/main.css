@@ -329,7 +329,7 @@ footer {
     margin: 20px 0;
 }
 
-.form {
+.send-form {
     width: 100%;
     height: 100%;
     display: flex;
@@ -339,7 +339,7 @@ footer {
     padding: 0 25px;
 }
 
-.form label {
+.send-form label {
     display: flex;
     flex-direction: column;
     margin: 10px 0;
@@ -348,7 +348,7 @@ footer {
     font-size: 14px;
 }
 
-.form label input {
+.send-form label input {
     margin-top: 5px;
     border: none;
     border-bottom: 1px solid #636363;
@@ -359,9 +359,15 @@ footer {
     font-family: 'CenturyGothic', sans-serif;
 }
 
-.form .request-button {
+.send-form .request-button {
     width: 100%;
     margin-top: 50px;
+}
+
+.send-form .error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 .form__recall {

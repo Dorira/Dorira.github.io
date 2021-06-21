@@ -233,21 +233,23 @@
             <img class="burger-button--close" style="display: none" src="/assets/img/icons/close.svg">
         </div>
         <div class="popup-content">
-            <form class="form">
+            <form class="send-form" method="POST">
                 <label>
                     Как вас зовут?
-                    <input placeholder="Введите ваше имя...">
+                    <input name="name" placeholder="Введите ваше имя...">
                 </label>
                 <label>
                     Номер телефона
-                    <input class="tel-input" placeholder="Введите номер телефона...">
+                    <input name="phone" class="tel-input" placeholder="Введите номер телефона...">
                 </label>
-                <button class="request-button">Отправить</button>
+                <button class="request-button send-button">Отправить</button>
+                <div class="error"></div>
                 <span class="form__recall">Перезвоним вам через 30 секунд</span>
                 <span class="form__privacy">Нажимая на кнопку отправить, я даю согласие на обработку <a href="assets/privacy.rtf" target="_blank">персональных данных.</a></span>
             </form>
         </div>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="index.js"></script>

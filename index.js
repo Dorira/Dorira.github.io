@@ -16,6 +16,9 @@ const galleryContentNext = document.querySelector('.gallery > .popup-content > .
 const flowersImages = document.querySelectorAll('.flowers-image')
 const balloonsImages = document.querySelectorAll('.balloons-image')
 
+const sendForm = document.querySelector('.send-form')
+const sendButton = document.querySelector('.send-button')
+const sendError = document.querySelector('.send-form > .error')
 new IMask(telInput, {
     mask: '+7(000)000-00-00',
 })
@@ -181,3 +184,44 @@ function initMap() {
         map,
     })
 }
+
+const validateAndGet = ({ elements }, errorField) => {
+    errorField.innerHTML = ''
+    console.log(elements)
+    const formData = {}
+    for(let i = 0; i < elements.length; i++) {
+        let item = elements.item(i)
+        formData[item.name] = item.value
+    }
+    delete formData['']
+    if (!formData.name.length) { 
+        errorField.innerHTML = 'Укажите имя!'
+        return
+    }
+    if (formData.phone.length !== 16) {
+        errorField.innerHTML = 'Укажите номер телефона!'
+        return
+    }
+    return formData
+}
+
+sendForm.addEventListener('submit', async event => {
+    event.preventDefault()
+    if (!validateAndGet(
+        sendForm,
+        sendError
+    )) return
+    try {
+        await fetch('send.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(validateAndGet(sendForm, document.querySelector('.send-form > .error')))
+        })
+        sendButton.innerHTML = 'Скоро перезвоним!'
+        sendButton.style.background = '#8dc477'
+    } catch(e) {
+        sendError.innerHTML = 'Произошла ошибка. Повторите попытку'
+    }
+})
